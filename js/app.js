@@ -1,34 +1,39 @@
-//Targeting in html
 const story = document.getElementById('storyLine');
 const btn = document.querySelector('.enter');
 const user = document.getElementById('userInput');
 
-//Enter function
-const enter = () => {
+// Door options
+const whichDoor = () => {
 
     const option = user.value;
     user.value = '';
-    btn.onclick = coinToss;
- 
-    if(option === 'ja' || option === 'JA' || option === 'Ja'){
-        coinToss();
-    } else if (option === 'nej' || option === 'NEJ' || option === 'nej'){
-        notReady();
+
+    switch(option){
+        case '1':
+            coinToss();
+            break;
+        case '2':
+            quiz();
+            break;
+        case '3':
+            darkMode();
+            break;
+        case '4':
+            todoList();
+            break;
+        default:
+            story.innerHTML = 'Hm... det där var inget av svarsalternativen som uppgavs.';
     }
 }
-enter();
+whichDoor();
 
-//not ready
-const notReady = () => {
-    story.innerHTML = 'Jag förstår! Du kanske inte är redo än... Är du redo nu?'
-} 
-notReady();
 
-//Toss a coin
+//Toss a coin (Rum 1)
 const coinToss = () => {
 
     const option = user.value;
     btn.onclick = coinToss;
+    btn.innerHTML = 'Singla slant';
 
     let randomNumber = Math.floor(Math.floor.random() * 2) + 1;
     user.value = randomNumber;
@@ -43,39 +48,26 @@ const coinToss = () => {
 }
 coinToss();
 
-//where is the the treaseure?
-
-const treasureSearch = () => {
-
-    story.innerHTML = 'Gissa i vilket rum skatten ligger? (1, 2, 3, 4)'
-    const option = user.value;
-    user.value = '';
-
-    switch(option){
-
-        case '1':
-            story.innerHTML = 'Nej där var den inte';
-            break;
-        case '2':
-            story.innerHTML = 'Ledsen, inget där!';
-            break;
-        case '3':
-            quiz();
-            break;
-        case '4':
-            story.innerHTML = 'Här fanns det ingenting heller dessvärre!';
-            break;
-        default:
-            story.innerHTML = 'Hm det där var inget svar';
-    }
-    
-}
-treasureSearch();
-
-// quiz
-
+// Quiz (Rum 2)
 const quiz = () => {
 
-    story.innerHTML = 'Kanon! Du hittade skatten';
+    story.innerHTML = 'Vilken är den äldsta staden i världen?';
+    btn.innerHTML = 'Skicka svar';
 }
 quiz();
+
+//Darkmode Toggle (Rum 3)
+const darkMode = () => {
+
+    story.innerHTML = 'Oj, Här var det mörkt! Vill du vara så snäll och tända lampan!';
+    btn.innerHTML = 'ON/OFF';
+}
+darkMode();
+
+const todoList = () => {
+
+    story.innerHTML = 'Vad ska vi lägga till i vår lista? ';
+    btn.innerHTML = 'Lägg till';
+
+}
+todoList();
