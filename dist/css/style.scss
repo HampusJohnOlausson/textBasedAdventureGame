@@ -4,8 +4,6 @@
     margin: 0;
 }
 
-/* Imports*/
-
 /* Colors*/
     $primary:#083358;
     $accent: #fff;
@@ -13,8 +11,17 @@
     $game-over: #fd0054;
     $next: #22b2da;
 
+ /* Wrapper */
+ .wrapper{
+    background-color: $primary;
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
     /* Button */
     .btn {
+        letter-spacing: 2px;
         width: 20rem;
         height: 4rem;
         border-radius: 3rem;
@@ -28,7 +35,7 @@
         cursor: pointer;
     }
 
-    /* flex class */
+    /* Flex class */
     .flex-center{
         display: flex;
         flex-direction: column;
@@ -36,43 +43,45 @@
         align-items: center;
     }
 
-    /* Wrapper */
-    .wrapper{
-        background-color: $primary;
-        min-height: 100vh;
-        width: 100%;
-        font-family: "Poppins", sans-serif;
-    }
-
  /* Start page*/
-
     .h1-welcome{
         color: $accent;
         text-align: center;
         font-size: 3rem;
         margin: 3rem;
+        letter-spacing: 3px;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     }
 
     .start{
         background-color: $start;
+        transition: ease 1s;
+    }
+    .start:hover{
+        background-color: $accent;
+        color: $start;
+        border: 3px solid $start;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
         
     /* Game page */
-
             .text-container{
                 background-color: $accent;
                 margin: 2rem;
+                width: 60%;
                 height: 40rem;
                 border-radius: 10px;
-                font-size: 1.2rem;
                 text-align: center;
                 box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
                 padding: 2rem;
 
-                input {
-                    font-size: 1.2rem;
+                #storyLine{
+                    font-size: 1.3rem;
+                    letter-spacing: 2px;
+                }
+                #userInput {
+                    font-size: 1.3rem;
                     border-radius: 10px;
                     outline: none;
                     border: 3px solid $next;
@@ -86,11 +95,17 @@
 
                 .enter {
                     background-color: $next;
+                    transition: ease 1s;
+                }
+                .enter:hover{
+                    background-color: $accent;
+                    color: $next;
+                    border: 3px solid $next;
+                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                 }
             }
 
     /* Game over */
-
             .h2-gameOver{
                 color: #fff;
                 text-align: center;
@@ -100,4 +115,11 @@
             .over {
                 background-color: $game-over;
                 text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+                transition: ease 1s;
+            }
+            .over:hover{
+                background-color: $accent;
+                color: $game-over;
+                border: 3px solid $game-over;
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             }

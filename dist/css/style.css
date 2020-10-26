@@ -5,10 +5,18 @@
   margin: 0;
 }
 
-/* Imports*/
 /* Colors*/
+/* Wrapper */
+.wrapper {
+  background-color: #083358;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
 /* Button */
 .btn {
+  letter-spacing: 2px;
   width: 20rem;
   height: 4rem;
   border-radius: 3rem;
@@ -23,7 +31,7 @@
   cursor: pointer;
 }
 
-/* flex class */
+/* Flex class */
 .flex-center {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,42 +48,49 @@
           align-items: center;
 }
 
-/* Wrapper */
-.wrapper {
-  background-color: #083358;
-  min-height: 100vh;
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-}
-
 /* Start page*/
 .h1-welcome {
   color: #fff;
   text-align: center;
   font-size: 3rem;
   margin: 3rem;
+  letter-spacing: 3px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .start {
   background-color: #12e2a3;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.start:hover {
+  background-color: #fff;
+  color: #12e2a3;
+  border: 3px solid #12e2a3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Game page */
 .text-container {
   background-color: #fff;
   margin: 2rem;
+  width: 60%;
   height: 40rem;
   border-radius: 10px;
-  font-size: 1.2rem;
   text-align: center;
   -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
   padding: 2rem;
 }
 
-.text-container input {
-  font-size: 1.2rem;
+.text-container #storyLine {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.text-container #userInput {
+  font-size: 1.3rem;
   border-radius: 10px;
   outline: none;
   border: 3px solid #22b2da;
@@ -90,6 +105,15 @@
 
 .text-container .enter {
   background-color: #22b2da;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.text-container .enter:hover {
+  background-color: #fff;
+  color: #22b2da;
+  border: 3px solid #22b2da;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 /* Game over */
@@ -103,5 +127,14 @@
 .over {
   background-color: #fd0054;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.over:hover {
+  background-color: #fff;
+  color: #fd0054;
+  border: 3px solid #fd0054;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=style.css.map */

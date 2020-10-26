@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv-se">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Text Based Adventure Game</title>
+    <title>A Text Based Adventure Game Main</title>
 
     <!--SASS-->
     <link rel="stylesheet" href="/dist/css/style.css">
@@ -13,15 +13,17 @@
 
 </head>
 <body>
-    <div class="wrapper flex-center">
 
+    <!--Game page-->
+    <div class="wrapper flex-center">
+            
+        <!--Text container-->
                 <div class="text-container flex-center">
 
-                    <p id="paragraf">jajajjajaajajssnjdnn jmsnsnska
-                         amsjmjajkjasjasaajsmakksa</p>
-                    <input type="text" id = "input" placeholder="Skriv ditt svar här">
+                    <p id="storyLine">Är du redo att utreda ett brott?<br>(Ja eller nej)</p>
+                    <input type="text" id = "userInput" placeholder="Skriv ditt svar här">
 
-                    <button class="enter btn">Skicka svar</button>
+                    <button class="enter btn" type="submit" onclick="enter()">Skicka svar</button>
                 </div>
             
     </div>
