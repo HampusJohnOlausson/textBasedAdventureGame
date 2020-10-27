@@ -2,23 +2,24 @@ const story = document.getElementById('storyLine');
 const btn = document.querySelector('.enter');
 const user = document.getElementById('userInput');
 
+
 // Door options
 const whichDoor = () => {
 
     const option = user.value;
     user.value = '';
-
+    
     switch(option){
-        case '1':
+        case 1:
             coinToss();
             break;
-        case '2':
+        case 2:
             quiz();
             break;
-        case '3':
+        case 3:
             darkMode();
             break;
-        case '4':
+        case 4:
             todoList();
             break;
         default:
@@ -26,6 +27,8 @@ const whichDoor = () => {
     }
 }
 whichDoor();
+
+
 
 
 //Toss a coin (Rum 1)
@@ -48,6 +51,8 @@ const coinToss = () => {
 }
 coinToss();
 
+/*
+
 // Quiz (Rum 2)
 const quiz = () => {
 
@@ -57,10 +62,13 @@ const quiz = () => {
 quiz();
 
 //Darkmode Toggle (Rum 3)
-const darkMode = () => {
+const switchToggle = () => {
 
     story.innerHTML = 'Oj, Här var det mörkt! Vill du vara så snäll och tända lampan!';
     btn.innerHTML = 'ON/OFF';
+
+    const change = document.querySelector('text-container');
+    change.classlist.toggle('darkMode');
 }
 darkMode();
 
@@ -71,3 +79,4 @@ const todoList = () => {
 
 }
 todoList();
+ */

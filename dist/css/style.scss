@@ -6,6 +6,7 @@
 
 /* Colors*/
     $primary:#083358;
+    $dark: #1e1f26;
     $accent: #fff;
     $start: #12e2a3;
     $game-over: #fd0054;
@@ -17,6 +18,10 @@
     min-height: 100vh;
     width: 100%;
     font-family: "Poppins", sans-serif;
+}
+.darkMode{
+    background-color: $dark;
+    color: $accent;
 }
 
     /* Button */
