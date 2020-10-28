@@ -1,5 +1,10 @@
 //----------------Green room----------------
 
+/**
+ * Function greenRoom selected.
+ * Button changed to be clickable for upcoming options.
+ * Background color changed as function running
+ */
 function greenRoom(){
 
     room.style.backgroundColor = '#12e2a3';
@@ -7,7 +12,9 @@ function greenRoom(){
     btn.innerHTML = 'Svara';
     btn.onclick = plantOrDresser;
     
-    //Check plant or dresser
+    /**
+     * Options between plant or dresser.
+     */
     function plantOrDresser(){
         const option = user.value;
         user.value = '';
@@ -16,7 +23,9 @@ function greenRoom(){
             story.innerHTML = 'Nej, där fanns det bara jord. Vill du kolla i byrån? (Ja eller Nej)';
             btn.onclick = checkDresser;
 
-            //Checking the dresser
+            /**
+             * Function for checking the dresser
+             */
             function checkDresser(){
                 const option = user.value;
                 user.value = '';
@@ -43,14 +52,21 @@ function greenRoom(){
 }
 
 //------------------- Purple Room -----------------------
-
+/**
+ * Function purpleRoom selected.
+ * Button changed to be clickable for upcoming options.
+ * Background color changed as function running
+ */
 function purpleRoom(){
     room.style.backgroundColor = '#9c1de7';
     story.innerHTML = 'Du är nu i det lila rummet. Här finns det bara ett fönster. Vill du fortsätta till det gröna rummet? (Ja eller Nej)';
     btn.innerHTML = 'Svara';
     btn.onclick = leavePurpleRoom;
 
-    //Want to leave purple room
+    /**
+     * Function leavePurpleRoom selected
+     * Option to enter greenRoom or wait for upcoming event.
+     */
     function leavePurpleRoom() {
         const option = user.value;
         user.value = '';
@@ -63,7 +79,10 @@ function purpleRoom(){
             btn.innerHTML = 'Vad gör du?';
             btn.onclick = outsideWindow;
 
-            //Look out the window?
+            /**
+             * Function outsideWindow selected.
+             * Option to look out the window or not.
+             */
             function outsideWindow() {
                 const option = user.value;
                 user.value = '';
@@ -73,7 +92,10 @@ function purpleRoom(){
                     btn.innerHTML = 'Vem ringer du?';
                     btn.onclick = callPolice;
 
-                    //Who to call
+                    /**
+                     * Function callPolice selected
+                     * Options who to call between the police or the glazier
+                     */
                     function callPolice(){
                         const option = user.value;
                         user.value = '';
@@ -104,14 +126,21 @@ function purpleRoom(){
 }
 
 //---------Orange room-----------
-
+/**
+ * Function orangeRoom selected.
+ * Button changed to be clickable for upcoming options.
+ * Background color changed as function running
+ */
 function orangeRoom(){
     room.style.backgroundColor = '#ff6d24';
     story.innerHTML = 'I det oranga rummet finns det en till dörr och en bokhylla. Vilken vill du kolla? (dörren eller bokhyllan) ';
     btn.innerHTML = 'Svara';
     btn.onclick = checkDoorOrShelf;
     
-    //Check the other door or bookshelf
+    /**
+     * Function checkDoorOrShelf seleted.
+     * Options between the door or the bookshelf.
+     */
     function checkDoorOrShelf(){
         const option = user.value;
         user.value = '';
@@ -123,7 +152,10 @@ function orangeRoom(){
                     story.innerHTML = 'Här fanns det bara massa tråkiga lexikon... Vill du gå igenom den andra dörren nu? (ja eller nej)';
                     btn.onclick = outOrNot;
 
-                    //Go out or not
+                    /**
+                     * Function outOrNot sleected.
+                     * Options to go throught the other door or not.
+                     */
                     function outOrNot(){
                         const option = user.value;
                         user.value = '';
@@ -144,6 +176,10 @@ function orangeRoom(){
 
 //-------Option to return key----------
 
+/**
+ * Function returnKey selected.
+ * Options between returning the key or not.
+ */
 function returnKey(){
     const option = user.value;
     user.value = '';
