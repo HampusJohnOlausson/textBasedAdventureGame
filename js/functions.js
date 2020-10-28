@@ -3,7 +3,7 @@
 /**
  * Function greenRoom selected.
  * Button changed to be clickable for upcoming options.
- * Background color changed as function running
+ * Background color changed as function running.
  */
 function greenRoom(){
 
@@ -13,6 +13,7 @@ function greenRoom(){
     btn.onclick = plantOrDresser;
     
     /**
+     * Function plantOrDresser selected.
      * Options between plant or dresser.
      */
     function plantOrDresser(){
@@ -25,6 +26,7 @@ function greenRoom(){
 
             /**
              * Function for checking the dresser
+             * Options to check or not.
              */
             function checkDresser(){
                 const option = user.value;
