@@ -1,0 +1,31 @@
+/*------------ Mobile Starts---------------*/
+
+@media screen and (max-width: 850px){
+
+    .wrapper{
+    .h1-welcome{
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    h3{
+        display: none;
+    }
+
+    .text-container{
+        
+        width: 90%;
+
+        #userInput {
+            width: 17rem;
+            
+            
+        }
+    }
+
+    .btn {
+        width: 17rem;
+        font-size: 1.5rem;
+       
+    }
+}
+}

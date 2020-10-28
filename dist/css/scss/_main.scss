@@ -1,0 +1,87 @@
+ /*------------Start page------------*/
+
+ .fas {
+    color: $accent;
+    font-size: 4rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 1rem;
+    animation: slidingUp 1.4s ease;
+}
+   .h1-welcome{
+       color: $accent;
+       text-align: center;
+       font-size: 3.5rem;
+       letter-spacing: 3px;
+       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+       animation: slidingUp 1.6s ease;
+   }
+   h3{
+       text-align: center;
+       color: $accent;
+       font-size: 2rem;
+       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+       letter-spacing: 2px;
+       margin-bottom: 1rem;
+       width: 50%;
+       animation: slidingUp 1.8s ease;
+       
+   }
+
+   .start{
+       background-color: $start;
+       transition: ease 1s;
+       animation: slidingUp 2s ease;
+       
+   }
+   .start:hover{
+       background-color: $accent;
+       color: $start;
+       border: 3px solid $start;
+       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+   }
+
+/*-----------Game page-----------*/
+
+           .text-container{
+               background-color: $accent;
+               margin: 2rem;
+               width: 60%;
+               height: 40rem;
+               border-radius: 10px;
+               text-align: center;
+               box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+               padding: 2rem;
+
+               #storyLine{
+                   font-size: 1.3rem;
+                   letter-spacing: 2px;
+               }
+               #userInput {
+                   font-size: 1.3rem;
+                   border-radius: 10px;
+                   outline: none;
+                   border: 3px solid $next;
+                   padding: 0.5rem;
+                   cursor: pointer;
+                   margin: 2rem 0rem;
+                   width: 20rem;
+                   height: 3rem;
+                   box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+               }
+
+               .enter {
+                   background-color: $next;
+                   transition: ease 1s;
+               }
+               .enter:hover{
+                   background-color: $accent;
+                   color: $next;
+                   border: 3px solid $next;
+                   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+               }
+           }
+           .backMenu{
+               color: #22b2da;
+               font-size: 1.5rem;
+               margin: 1rem;
+           }

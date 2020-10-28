@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*------Colors------*/
+    $primary:#ad1457;
+    $dark: #1e1f26;
+    $accent: #fff;
+    $start: #12e2a3;
+    $game-over: #fd0054;
+    $next: #22b2da;
+
+/*------imports-----*/
+@import "media";
+@import "main";
+
+/*------Wrapper-----*/
+ .wrapper{
+    background-color: $primary;
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
+
+/*-------Button------*/
+.btn {
+    letter-spacing: 2px;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 3rem;
+    font-size: 1.6rem;
+    color: $accent;
+    border: none;
+    border: 3px solid $accent;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+    outline: none;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+}
+
+/*-----Flex class-----*/
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*---------------Animation-----------------*/
+@keyframes slidingUp {
+    0%{
+        transform: translateY(20rem);
+    }
+    100%{
+        transform: translateY(0);
+    }
+ }
+
+
+
