@@ -41,7 +41,7 @@ function greenRoom(){
                     story.innerHTML = 'Det finns inte så mycket annat att göra i detta rum';
                     btn.style.display = 'none';
                     user.style.display = 'none';
-                    link.innerHTML = 'Gå ur rummet'; //Link to room menu
+                    link.innerHTML = 'Gå ut ur rummet'; /** Link to room menu*/
                 }
             }
 
@@ -62,7 +62,7 @@ function greenRoom(){
  */
 function purpleRoom(){
     room.style.backgroundColor = '#9c1de7'; /** Change of room color. */
-    story.innerHTML = 'Du är nu i det lila rummet. Här finns det bara ett fönster. Vill du fortsätta till det gröna rummet? (Ja eller Nej)';
+    story.innerHTML = 'Du är nu i det lila rummet. Här finns det ett fönster och en dörr. Vill du gå till (Fönstret eller Dörren)?';
     btn.innerHTML = 'Svara'; 
     btn.onclick = leavePurpleRoom;
 
@@ -75,10 +75,10 @@ function purpleRoom(){
         user.value = '';
         
         /** Options */
-        if(option === 'ja' || option === 'JA' || option === 'Ja'){
-            greenRoom();
+        if(option === 'dörren' || option === 'DÖRREN' || option === 'Dörren'){
+            orangeRoom();
 
-        }else if(option === 'nej' || option === 'NEJ' || option === 'Nej'){
+        }else if(option === 'fönstret' || option === 'FÖNSTRET' || option === 'Fönstret'){
             story.innerHTML = 'Pang! Oj! fönstret gick sönder. Någon kastade in en sten. Vill du titta vem det var? (Ja eller Nej)';
             btn.innerHTML = 'Vad gör du?'; 
             btn.onclick = outsideWindow;
@@ -124,7 +124,7 @@ function purpleRoom(){
                     story.innerHTML = 'Jakten på de försvunna nycklarna fortsätter! Gå ut och fortsätta leta när du känner för det';
                     btn.style.display = 'none';
                     user.style.display = 'none';
-                    link.innerHTML = `Tillbaks till 'Val av rum'`;
+                    link.innerHTML = `Gå ut ur rummet`;
                 }
             }
         }
@@ -139,7 +139,7 @@ function purpleRoom(){
  */
 function orangeRoom(){
     room.style.backgroundColor = '#ff6d24'; /** Change of room color. */
-    story.innerHTML = 'I det oranga rummet finns det en till dörr och en bokhylla. Vilken vill du kolla? (Dörren eller Bokhyllan) ';
+    story.innerHTML = 'Du är nu i det oranga rummet, här finns det en till dörr och en bokhylla. Vilken vill du kolla? (Dörren eller Bokhyllan) ';
     btn.innerHTML = 'Svara';
     btn.onclick = checkDoorOrShelf;
     
@@ -175,10 +175,75 @@ function orangeRoom(){
                             story.innerHTML = 'Hm... Det fanns inte så mycket mer att göra här.';
                             btn.style.display = 'none';
                             user.style.display = 'none';
-                            link.innerHTML = `Tillbaks till 'Val av rum'`;
+                            link.innerHTML = 'Gå ut ur rummet';
                         }
                     }
                 }
+    }
+}
+//---------------------------Blue Room----------------------------
+/**
+ * Function orangeRoom selected.
+ * Button changed to be clickable for upcoming options.
+ * Background color changed as function running
+ */
+function blueRoom(){
+
+    room.style.backgroundColor = '#3d6cb9'; /** Change of room color. */
+    story.innerHTML = 'Välkommen till det blå ruuuummm...Oh nej! Det är ett spöke här!!! Det ända sättet att få han att försvinna är om du gissar rätt på vilket tal han tänker på! Vill du gissa eller gå ut från rummet? (Gissa eller Ut)';
+    btn.onclick = guessOrNot;
+
+    /**
+     * Function guessOrNot selected.
+     * Options between guess number or leave room.
+     */
+    function guessOrNot(){
+
+        const option = user.value;
+        user.value = '';
+
+        /** Options */
+        if(option === 'gissa' || option === 'GISSA' || option === 'Gissa'){
+
+            story.innerHTML = 'Du är modig du! Gissa på ett tal mellan (1 - 5)';
+            btn.onclick = guessNumber;
+            btn.innerHTML = 'Gissa';
+
+            /**
+             * Function guessNumber selected.
+             * User inputs a guess to make ghost dissapear.
+             */
+            function guessNumber(){
+
+                let guess = user.value;
+                user.value = '';
+
+                //Random Math Function
+                let number = Math.floor(Math.random() * 5 + 1);
+
+                /**Correct guess */
+                if(guess == number){
+                    story.innerHTML = `Bra jobbat! Du gissade ${number} och det var rätt och nu har spöket försvunnit och ingen behöver vara rädd mer!`;
+                    btn.style.display = 'none';
+                    user.style.display = 'none';
+                    link.innerHTML = 'Gå ut ur rummet';
+
+                    /** Guesss was to high */
+                }else if(guess > number){
+                    story.innerHTML = 'Fel! Det var för högt. Försök igen!';
+
+                    /** Guess was to low */
+                } else if(guess < number){
+                    story.innerHTML = 'Fel! Det var för lågt. Försök igen!';
+                }
+            }
+
+        }else if(option === 'ut'|| option === 'UT' || option === 'Ut'){
+            story.innerHTML = 'Jag förstår dig! Det ät läskigt med spöken.';
+            btn.style.display = 'none';
+            user.style.display = 'none';
+            link.innerHTML = 'Gå ut ur rummet';
+        }
     }
 }
 
