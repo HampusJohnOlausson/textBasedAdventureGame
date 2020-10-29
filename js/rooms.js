@@ -68,7 +68,7 @@ function purpleRoom(){
 
     /**
      * Function leavePurpleRoom selected
-     * Option to enter greenRoom or wait for upcoming event.
+     * Option to go to another door or go to window.
      */
     function leavePurpleRoom() {
         const option = user.value;
@@ -192,7 +192,7 @@ function blueRoom(){
     room.style.backgroundColor = '#3d6cb9'; /** Change of room color. */
     story.innerHTML = 'Välkommen till det blå ruuuummm...Oh nej! Det är ett spöke här!!! Det ända sättet att få han att försvinna är om du gissar rätt på vilket tal han tänker på! Vill du gissa eller gå ut från rummet? (Gissa eller Ut)';
     btn.onclick = guessOrNot;
-
+    btn.innerHTML = 'Svara'; 
     /**
      * Function guessOrNot selected.
      * Options between guess number or leave room.
@@ -218,7 +218,7 @@ function blueRoom(){
                 let guess = user.value;
                 user.value = '';
 
-                //Random Math Function
+                /**Random Math Function */
                 let number = Math.floor(Math.random() * 5 + 1);
 
                 /**Correct guess */
