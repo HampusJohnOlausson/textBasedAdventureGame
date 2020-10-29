@@ -8,7 +8,6 @@ const room = document.querySelector('.wrapper'); //Room color
 
 
 //-----------------Choose room menu---------------
-
 /**
  * whichRoom function selected.
  * User options to select a color that starts a function.
@@ -17,7 +16,7 @@ function whichRoom(){
 
     const option = user.value;
     user.value = '';
-
+    
     /**
      * Switch statement with room options, that search for the users input in order to interact.
      * As user inputs option, function of the selected room is running. 
@@ -25,23 +24,22 @@ function whichRoom(){
     switch(option){
 
         case 'grön':
-            //greenRoom function option.
+            /** greenRoom function selected. */
             greenRoom();
              break;
 
         case 'lila':
-            //purpleRoom function option.
+            /** purpleRoom function selected. */
             purpleRoom();
             break;
 
         case 'orange':
-            //orangeRoom function option.
+            /** orangeRoom function selected. */
             orangeRoom();
             break; 
 
-            //Error message! Non of the options.
+            /** Error message! Non of the options selected. */
          default:
              story.innerHTML = 'Jag förstår inte vad du menar. Försök igen!';
     }
 }
-

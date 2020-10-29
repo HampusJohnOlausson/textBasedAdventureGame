@@ -5,7 +5,8 @@ This is a text based adventure game where the user can interact and become a par
 Created with tools such as HTML, CSS/SASS and Javascript. The game is responsive.
 
 GitHub pages: 
-GitHub repo:
+
+GitHub repo: https://github.com/HampusJohnOlausson/textBasedAdventureGame
 
 
 

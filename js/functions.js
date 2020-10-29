@@ -1,5 +1,4 @@
-//----------------Green room----------------
-
+//-------------------Green room--------------------
 /**
  * Function greenRoom selected.
  * Button changed to be clickable for upcoming options.
@@ -7,9 +6,9 @@
  */
 function greenRoom(){
 
-    room.style.backgroundColor = '#12e2a3';
-    story.innerHTML = 'I det gröna rummet finns det en kruka och en byrå. Vilken vill du kolla i? (Krukan eller Byrån)';
-    btn.innerHTML = 'Svara';
+    room.style.backgroundColor = '#12e2a3'; /** Change of room color. */
+    story.innerHTML = 'I det gröna rummet finns det en kruka och en byrå. Vilken vill du kolla i? (Krukan eller Byrån)'; //Story for this function
+    btn.innerHTML = 'Svara'; /** Change of text inside of button. */
     btn.onclick = plantOrDresser;
     
     /**
@@ -20,6 +19,7 @@ function greenRoom(){
         const option = user.value;
         user.value = '';
 
+        /** Options */
         if(option === 'krukan' || option === 'KRUKAN' || option === 'Krukan'){
             story.innerHTML = 'Nej, där fanns det bara jord. Vill du kolla i byrån? (Ja eller Nej)';
             btn.onclick = checkDresser;
@@ -32,6 +32,7 @@ function greenRoom(){
                 const option = user.value;
                 user.value = '';
 
+                /** Options */
                 if(option === 'ja' || option === 'JA' || option === 'Ja'){
                     story.innerHTML = 'Kanon! Du hittade nyckeln. Vill du lämna den till ägaren? (Ja eller Nej)';
                     btn.onclick = returnKey;
@@ -40,7 +41,7 @@ function greenRoom(){
                     story.innerHTML = 'Det finns inte så mycket annat att göra i detta rum';
                     btn.style.display = 'none';
                     user.style.display = 'none';
-                    link.innerHTML = 'Gå ur rummet';
+                    link.innerHTML = 'Gå ur rummet'; //Link to room menu
                 }
             }
 
@@ -60,9 +61,9 @@ function greenRoom(){
  * Background color changed as function running
  */
 function purpleRoom(){
-    room.style.backgroundColor = '#9c1de7';
+    room.style.backgroundColor = '#9c1de7'; /** Change of room color. */
     story.innerHTML = 'Du är nu i det lila rummet. Här finns det bara ett fönster. Vill du fortsätta till det gröna rummet? (Ja eller Nej)';
-    btn.innerHTML = 'Svara';
+    btn.innerHTML = 'Svara'; 
     btn.onclick = leavePurpleRoom;
 
     /**
@@ -72,13 +73,14 @@ function purpleRoom(){
     function leavePurpleRoom() {
         const option = user.value;
         user.value = '';
-    
+        
+        /** Options */
         if(option === 'ja' || option === 'JA' || option === 'Ja'){
             greenRoom();
 
         }else if(option === 'nej' || option === 'NEJ' || option === 'Nej'){
             story.innerHTML = 'Pang! Oj! fönstret gick sönder. Någon kastade in en sten. Vill du titta vem det var? (Ja eller Nej)';
-            btn.innerHTML = 'Vad gör du?';
+            btn.innerHTML = 'Vad gör du?'; 
             btn.onclick = outsideWindow;
 
             /**
@@ -89,9 +91,10 @@ function purpleRoom(){
                 const option = user.value;
                 user.value = '';
 
+                /** Options */
                 if(option === 'ja' || option === 'JA' || option === 'Ja'){
                     story.innerHTML = 'Du tittar ut genom fönstret och ser en inbrottstjuv. Vem ringer du (Polisen eller Glasmästaren)?';
-                    btn.innerHTML = 'Vem ringer du?';
+                    btn.innerHTML = 'Vem ringer du?'; //Changing the buttons text.
                     btn.onclick = callPolice;
 
                     /**
@@ -102,11 +105,12 @@ function purpleRoom(){
                         const option = user.value;
                         user.value = '';
 
+                        /** Options */
                         if(option === 'polisen' || option === 'POLISEN' || option === 'Polisen'){
                             story.innerHTML = 'Polisen kom direkt och tog fast tjuven! Bra jobbat!';
                             btn.style.display = 'none';
                             user.style.display = 'none';
-                            link.innerHTML = `Tillbaks till 'Val av rum'`;
+                            link.innerHTML = `Tillbaks till 'Val av rum'`; 
 
                         }else if(option === 'glasmästaren' || option === 'GLASMÄSTAREN' || option === 'Glasmästaren'){
                             story.innerHTML = 'Glasmästaren kom en timme senare och bytte ut fönstret fast tjuven hann undan.';
@@ -127,15 +131,15 @@ function purpleRoom(){
     }
 }
 
-//---------Orange room-----------
+//--------------------Orange room--------------------
 /**
  * Function orangeRoom selected.
  * Button changed to be clickable for upcoming options.
  * Background color changed as function running
  */
 function orangeRoom(){
-    room.style.backgroundColor = '#ff6d24';
-    story.innerHTML = 'I det oranga rummet finns det en till dörr och en bokhylla. Vilken vill du kolla? (dörren eller bokhyllan) ';
+    room.style.backgroundColor = '#ff6d24'; /** Change of room color. */
+    story.innerHTML = 'I det oranga rummet finns det en till dörr och en bokhylla. Vilken vill du kolla? (Dörren eller Bokhyllan) ';
     btn.innerHTML = 'Svara';
     btn.onclick = checkDoorOrShelf;
     
@@ -146,12 +150,13 @@ function orangeRoom(){
     function checkDoorOrShelf(){
         const option = user.value;
         user.value = '';
-    
+
+                /** Options */
                 if(option === 'dörren' || option === 'DÖRREN' || option === 'Dörren'){
                     purpleRoom();
 
                 }else if(option === 'bokhyllan' || option === 'BOKHYLLAN' || option === 'Bokhyllan'){
-                    story.innerHTML = 'Här fanns det bara massa tråkiga lexikon... Vill du gå igenom den andra dörren nu? (ja eller nej)';
+                    story.innerHTML = 'Här fanns det bara massa tråkiga lexikon... Vill du gå igenom den andra dörren nu? (Ja eller Nej)';
                     btn.onclick = outOrNot;
 
                     /**
@@ -162,6 +167,7 @@ function orangeRoom(){
                         const option = user.value;
                         user.value = '';
 
+                        /** Options */
                         if(option === 'ja' || option === 'JA' || option === 'Ja'){
                             purpleRoom();
                             
@@ -176,8 +182,7 @@ function orangeRoom(){
     }
 }
 
-//-------Option to return key----------
-
+//------------------Option to return key-------------------
 /**
  * Function returnKey selected.
  * Options between returning the key or not.
@@ -186,6 +191,7 @@ function returnKey(){
     const option = user.value;
     user.value = '';
 
+    /** Options */
     if(option === 'ja' || option === 'JA' || option === 'Ja'){
         story.innerHTML = 'Tack så jättemycket för att du hittade nyckeln! säger ägaren';
         btn.style.display = 'none';

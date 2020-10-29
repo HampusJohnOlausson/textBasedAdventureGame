@@ -1,12 +1,14 @@
  /*------------Start page------------*/
 
+ /* Key icon */
  .fas {
     color: $accent;
     font-size: 4rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
     margin-bottom: 1rem;
-    animation: slidingUp 1.4s ease;
+    animation: slidingDown 2.5s ease;
 }
+/* Hero text */
    .h1-welcome{
        color: $accent;
        text-align: center;
@@ -27,6 +29,7 @@
        
    }
 
+   /* Start button */
    .start{
        background-color: $start;
        transition: ease 1s;
@@ -42,6 +45,7 @@
 
 /*-----------Game page-----------*/
 
+/* Text / Questions */
            .text-container{
                background-color: $accent;
                margin: 2rem;
@@ -55,7 +59,7 @@
                #storyLine{
                    font-size: 1.3rem;
                    letter-spacing: 2px;
-               }
+               } /* User input */
                #userInput {
                    font-size: 1.3rem;
                    border-radius: 10px;
@@ -68,7 +72,7 @@
                    height: 3rem;
                    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
                }
-
+               /* Submit button */
                .enter {
                    background-color: $next;
                    transition: ease 1s;
@@ -79,7 +83,7 @@
                    border: 3px solid $next;
                    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
                }
-           }
+           } /* Go back to menu link */
            .backMenu{
                color: #22b2da;
                font-size: 1.5rem;
