@@ -4,8 +4,6 @@ This is a text based adventure game where the user can interact and become a par
 
 Created with tools such as HTML, CSS/SASS and Javascript. The game is responsive.
 
-Click on 'Watch Sass' symbol further down on the page, than right click on index.html and click Live Server to make website go live on your web browser.
-
 GitHub pages: https://hampusjohnolausson.github.io/textBasedAdventureGame/
 
 GitHub repo: https://github.com/HampusJohnOlausson/textBasedAdventureGame
