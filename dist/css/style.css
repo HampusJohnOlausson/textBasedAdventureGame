@@ -1,0 +1,201 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*------Colors------*/
+/*------imports-----*/
+/*------------ Mobile Starts---------------*/
+@media screen and (max-width: 850px) {
+  .wrapper .h1-welcome {
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .wrapper h3 {
+    display: none;
+  }
+  .wrapper .text-container {
+    width: 90%;
+  }
+  .wrapper .text-container #userInput {
+    width: 17rem;
+  }
+  .wrapper .btn {
+    width: 17rem;
+    font-size: 1.5rem;
+  }
+}
+
+/*------------Start page------------*/
+/* Key icon */
+.fas {
+  color: #fff;
+  font-size: 3rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-animation: slidingDown 2.5s ease;
+          animation: slidingDown 2.5s ease;
+}
+
+/* Hero text */
+.h1-welcome {
+  color: #fff;
+  text-align: center;
+  font-size: 3.5rem;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-animation: slidingDown 1.6s ease;
+          animation: slidingDown 1.6s ease;
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+  width: 50%;
+  -webkit-animation: slidingDown 1.8s ease;
+          animation: slidingDown 1.8s ease;
+}
+
+/* Start button */
+.start {
+  background-color: #12e2a3;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+  -webkit-animation: slidingUp 2s ease;
+          animation: slidingUp 2s ease;
+}
+
+.start:hover {
+  background-color: #fff;
+  color: #12e2a3;
+  border: 3px solid #12e2a3;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/*-----------Game page-----------*/
+/* Text / Questions */
+.text-container {
+  background-color: #fff;
+  margin: 2rem;
+  width: 60%;
+  height: 40rem;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  /* User input */
+  /* Submit button */
+}
+
+.text-container #storyLine {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+}
+
+.text-container #userInput {
+  font-size: 1.3rem;
+  border-radius: 10px;
+  outline: none;
+  border: 3px solid #22b2da;
+  padding: 0.5rem;
+  cursor: pointer;
+  margin: 2rem 0rem;
+  width: 20rem;
+  height: 3rem;
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text-container .enter {
+  background-color: #22b2da;
+  -webkit-transition: ease 1s;
+  transition: ease 1s;
+}
+
+.text-container .enter:hover {
+  background-color: #fff;
+  color: #22b2da;
+  border: 3px solid #22b2da;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Go back to menu link */
+.backMenu {
+  color: #22b2da;
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+/*------Wrapper-----*/
+.wrapper {
+  background-color: #ad1457;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/*-------Button------*/
+.btn {
+  letter-spacing: 2px;
+  width: 20rem;
+  height: 4rem;
+  border-radius: 3rem;
+  font-size: 1.6rem;
+  color: #fff;
+  border: none;
+  border: 3px solid #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+
+/*-----Flex class-----*/
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*---------------Animation-----------------*/
+/* Sliding down */
+@-webkit-keyframes slidingDown {
+  0% {
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slidingDown {
+  0% {
+    -webkit-transform: translateY(-10rem);
+            transform: translateY(-10rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */
