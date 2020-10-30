@@ -12,7 +12,6 @@
   .wrapper .h1-welcome {
     font-size: 2rem;
     margin-top: 1rem;
-    margin-bottom: 2rem;
   }
   .wrapper h3 {
     display: none;
@@ -29,7 +28,12 @@
   }
 }
 
-/*------------Start page------------*/
+@media screen and (max-width: 650px) {
+  .wrapper .fas {
+    display: none;
+  }
+}
+
 /* Key icon */
 .fas {
   color: #fff;
@@ -61,23 +65,6 @@ h3 {
           animation: slidingDown 1.8s ease;
 }
 
-/* Start button */
-.start {
-  background-color: #12e2a3;
-  -webkit-transition: ease 1s;
-  transition: ease 1s;
-  -webkit-animation: slidingUp 2s ease;
-          animation: slidingUp 2s ease;
-}
-
-.start:hover {
-  background-color: #fff;
-  color: #12e2a3;
-  border: 3px solid #12e2a3;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/*-----------Game page-----------*/
 /* Text / Questions */
 .text-container {
   background-color: #fff;
