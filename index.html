@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Text Based Adventure Game Start</title>
+    <title>A Text Based Adventure Game Main</title>
 
     <!--SASS-->
-    <link rel="stylesheet" href="/dist/css/style.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
 
     <!--Google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
@@ -21,14 +21,26 @@
 
 </head>
 <body>
-    <!--Start page-->
+
+    <!--Game page-->
     <div class="wrapper flex-center">
         <i class="fas fa-key"></i>
         <h1 class="h1-welcome">Jakten på den försvunna nyckeln</h1>
         <h3>Se vad som döljer sig i de olika rummen...</h3>
-          <a href="/main.html"><button class="start btn" type="submit" onclick="enterName()">Start</button></a>
+
+        <!--Text container-->
+                <div class="text-container flex-center">
+
+                    <p id="storyLine">Välj vilket rum du vill börja leta i<br>(lila, blå, grön eller orange)</p>
+                    <input type="text" id = "userInput" placeholder="Skriv ditt svar här">
+                    
+                    <button class="enter btn" type="submit" onclick="whichRoom()">Välj rum</button>
+                    <a href="/html/main.html" class="backMenu"></a>
+                </div>
+            
     </div>
     <!--Javascript-->
     <script src="/js/app.js"></script>
+    <script src="/js/rooms.js"></script>
 </body>
 </html>

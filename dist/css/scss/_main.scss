@@ -3,9 +3,8 @@
  /* Key icon */
  .fas {
     color: $accent;
-    font-size: 4rem;
+    font-size: 3rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-    margin-bottom: 1rem;
     animation: slidingDown 2.5s ease;
 }
 /* Hero text */
@@ -15,7 +14,7 @@
        font-size: 3.5rem;
        letter-spacing: 3px;
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-       animation: slidingUp 1.6s ease;
+       animation: slidingDown 1.6s ease;
    }
    h3{
        text-align: center;
@@ -23,9 +22,8 @@
        font-size: 2rem;
        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
        letter-spacing: 2px;
-       margin-bottom: 1rem;
        width: 50%;
-       animation: slidingUp 1.8s ease;
+       animation: slidingDown 1.8s ease;
        
    }
 

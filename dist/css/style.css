@@ -33,9 +33,8 @@
 /* Key icon */
 .fas {
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  margin-bottom: 1rem;
   -webkit-animation: slidingDown 2.5s ease;
           animation: slidingDown 2.5s ease;
 }
@@ -47,8 +46,8 @@
   font-size: 3.5rem;
   letter-spacing: 3px;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-  -webkit-animation: slidingUp 1.6s ease;
-          animation: slidingUp 1.6s ease;
+  -webkit-animation: slidingDown 1.6s ease;
+          animation: slidingDown 1.6s ease;
 }
 
 h3 {
@@ -57,10 +56,9 @@ h3 {
   font-size: 2rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   letter-spacing: 2px;
-  margin-bottom: 1rem;
   width: 50%;
-  -webkit-animation: slidingUp 1.8s ease;
-          animation: slidingUp 1.8s ease;
+  -webkit-animation: slidingDown 1.8s ease;
+          animation: slidingDown 1.8s ease;
 }
 
 /* Start button */
@@ -179,28 +177,6 @@ h3 {
 }
 
 /*---------------Animation-----------------*/
-/* Sliding up */
-@-webkit-keyframes slidingUp {
-  0% {
-    -webkit-transform: translateY(20rem);
-            transform: translateY(20rem);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-@keyframes slidingUp {
-  0% {
-    -webkit-transform: translateY(20rem);
-            transform: translateY(20rem);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 /* Sliding down */
 @-webkit-keyframes slidingDown {
   0% {
