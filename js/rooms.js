@@ -19,7 +19,6 @@ function greenRoom(){
         const option = user.value;
         user.value = '';
 
-        /** Options */
         if(option === 'krukan' || option === 'KRUKAN' || option === 'Krukan'){
             story.innerHTML = 'Nej, där fanns det bara jord. Vill du kolla i byrån? (Ja eller Nej)';
             btn.onclick = checkDresser;
@@ -32,7 +31,6 @@ function greenRoom(){
                 const option = user.value;
                 user.value = '';
 
-                /** Options */
                 if(option === 'ja' || option === 'JA' || option === 'Ja'){
                     story.innerHTML = 'Kanon! Du hittade nyckeln. Vill du lämna den till ägaren? (Ja eller Nej)';
                     btn.onclick = returnKey;
@@ -74,7 +72,6 @@ function purpleRoom(){
         const option = user.value;
         user.value = '';
         
-        /** Options */
         if(option === 'dörren' || option === 'DÖRREN' || option === 'Dörren'){
             orangeRoom();
 
@@ -91,7 +88,7 @@ function purpleRoom(){
                 const option = user.value;
                 user.value = '';
 
-                /** Options */
+                
                 if(option === 'ja' || option === 'JA' || option === 'Ja'){
                     story.innerHTML = 'Du tittar ut genom fönstret och ser en inbrottstjuv. Vem ringer du (Polisen eller Glasmästaren)?';
                     btn.innerHTML = 'Vem ringer du?'; //Changing the buttons text.
@@ -105,7 +102,7 @@ function purpleRoom(){
                         const option = user.value;
                         user.value = '';
 
-                        /** Options */
+                        
                         if(option === 'polisen' || option === 'POLISEN' || option === 'Polisen'){
                             story.innerHTML = 'Polisen kom direkt och tog fast tjuven! Bra jobbat!';
                             btn.style.display = 'none';
@@ -151,7 +148,7 @@ function orangeRoom(){
         const option = user.value;
         user.value = '';
 
-                /** Options */
+                
                 if(option === 'dörren' || option === 'DÖRREN' || option === 'Dörren'){
                     purpleRoom();
 
@@ -167,7 +164,7 @@ function orangeRoom(){
                         const option = user.value;
                         user.value = '';
 
-                        /** Options */
+                        
                         if(option === 'ja' || option === 'JA' || option === 'Ja'){
                             purpleRoom();
                             
@@ -202,7 +199,7 @@ function blueRoom(){
         const option = user.value;
         user.value = '';
 
-        /** Options */
+        
         if(option === 'gissa' || option === 'GISSA' || option === 'Gissa'){
 
             story.innerHTML = 'Du är modig du! Gissa på ett tal mellan (1 - 5)';
@@ -218,21 +215,21 @@ function blueRoom(){
                 let guess = user.value;
                 user.value = '';
 
-                /**Random Math Function */
+                /* Random Math Function */
                 let number = Math.floor(Math.random() * 5 + 1);
 
-                /**Correct guess */
+                /* Correct guess */
                 if(guess == number){
                     story.innerHTML = `Bra jobbat! Du gissade ${number} och det var rätt och nu har spöket försvunnit och ingen behöver vara rädd mer!`;
                     btn.style.display = 'none';
                     user.style.display = 'none';
                     link.innerHTML = 'Gå ut ur rummet';
 
-                    /** Guesss was to high */
+                    /* Guesss was to high */
                 }else if(guess > number){
                     story.innerHTML = 'Fel! Det var för högt. Försök igen!';
 
-                    /** Guess was to low */
+                    /* Guess was to low */
                 } else if(guess < number){
                     story.innerHTML = 'Fel! Det var för lågt. Försök igen!';
                 }
@@ -256,7 +253,6 @@ function returnKey(){
     const option = user.value;
     user.value = '';
 
-    /** Options */
     if(option === 'ja' || option === 'JA' || option === 'Ja'){
         story.innerHTML = 'Tack så jättemycket för att du hittade nyckeln! säger ägaren';
         btn.style.display = 'none';
