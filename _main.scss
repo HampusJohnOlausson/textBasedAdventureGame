@@ -1,4 +1,3 @@
- /*------------Start page------------*/
 
  /* Key icon */
  .fas {
@@ -26,22 +25,6 @@
        animation: slidingDown 1.8s ease;
        
    }
-
-   /* Start button */
-   .start{
-       background-color: $start;
-       transition: ease 1s;
-       animation: slidingUp 2s ease;
-       
-   }
-   .start:hover{
-       background-color: $accent;
-       color: $start;
-       border: 3px solid $start;
-       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   }
-
-/*-----------Game page-----------*/
 
 /* Text / Questions */
            .text-container{
