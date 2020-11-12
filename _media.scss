@@ -15,7 +15,6 @@
     .text-container{
         
         width: 90%;
-
         #userInput {
             width: 17rem;
             
@@ -35,12 +34,38 @@
 @media screen and (max-width: 650px){
 
     .wrapper {
-
         .fas{
             display: none;
         }
+        .h1-welcome{
+            font-size: 1.6rem;
+        }
+        .text-container{
+            margin: 1rem;
+            padding: 1rem;
+            padding-bottom: 0rem;
+            width: 90%;
+            height: 27rem;
+            #storyLine{
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+            }
+            #userInput {
+                font-size: 1.2rem;
+                margin: 1rem 0rem;
+                width: 16rem;
+                height: 3rem;
+            }
+        }
 
+        .btn {
+            width: 16rem;
+            height: 4rem;
+            font-size: 1.2rem;
+            margin-bottom: 0;
+        }
     }
+
     
 
 }

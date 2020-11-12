@@ -32,6 +32,32 @@
   .wrapper .fas {
     display: none;
   }
+  .wrapper .h1-welcome {
+    font-size: 1.6rem;
+  }
+  .wrapper .text-container {
+    margin: 1rem;
+    padding: 1rem;
+    padding-bottom: 0rem;
+    width: 90%;
+    height: 27rem;
+  }
+  .wrapper .text-container #storyLine {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+  .wrapper .text-container #userInput {
+    font-size: 1.2rem;
+    margin: 1rem 0rem;
+    width: 16rem;
+    height: 3rem;
+  }
+  .wrapper .btn {
+    width: 16rem;
+    height: 4rem;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
 }
 
 /* Key icon */
